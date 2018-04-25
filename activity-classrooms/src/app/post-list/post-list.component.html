@@ -1,0 +1,8 @@
+<h2 style="font-weight:bold;">Posts</h2>
+<ul class="list-group">
+  <app-post-list-item *ngFor="let post of postArray; let i = index"
+  [title]="post.title"
+  [content]="post.content"
+  [index]="i">
+  </app-post-list-item>
+</ul>

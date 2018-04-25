@@ -1,0 +1,8 @@
+<li [ngClass]="{'list-group-item' : true}" [ngStyle]="{backgroundColor : getColor()}">
+    <h3 style="font-weight:bold;display:inline-block;">{{ title }}</h3>
+    <span style="font-style:italic;font-size:22px;display:inline-block;float:right">{{ created_at | date: 'short' | date: 'd/m/y, H:m a' }}</span>
+    <p>{{ content}}</p>
+    <button (click)="onLike()" class="btn btn-success">Love it ! </button>
+    <button (click)="onDislike()" class="btn btn-danger">Don't love it !</button>
+    <button class="btn btn-danger" (click)="onDeletePost()">Delete post</button>
+</li>
